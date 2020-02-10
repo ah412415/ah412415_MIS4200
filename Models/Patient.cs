@@ -19,7 +19,7 @@ namespace ah412415_MIS4200.Models
         public ICollection<Appointment> Appointment { get; set; }
         
         [Key]
-        public int patient { get; set; }
+        public int patientID { get; set; }
 
     }
 }
