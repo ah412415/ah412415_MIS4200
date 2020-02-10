@@ -8,7 +8,7 @@ namespace ah412415_MIS4200.Models
 {
     public class Doctor
     {
-        public int doctorID { get; set; }
+        
         public string doctorFirstName { get; set; }
         public string doctorLastName { get; set; }
         public string doctorSince { get; set; }
