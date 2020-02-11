@@ -168,21 +168,22 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\AppointmentsController.cs" />
-    <Compile Include="Controllers\DoctorsController.cs" />
+    <Compile Include="Controllers\Appointment1Controller.cs" />
+    <Compile Include="Controllers\Doctor1Controller.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\PatientsController.cs" />
+    <Compile Include="Controllers\Patient1Controller.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\MISContext\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="DAL\MIS4200Context.cs" />
-    <Compile Include="Models\Appointment.cs" />
-    <Compile Include="Models\Doctor.cs" />
+    <Compile Include="Models\Appointment1.cs" />
+    <Compile Include="Models\Doctor1.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\Patient.cs" />
+    <Compile Include="Models\Patient1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -243,25 +244,24 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Doctors\Create.cshtml" />
-    <Content Include="Views\Doctors\Delete.cshtml" />
-    <Content Include="Views\Doctors\Details.cshtml" />
-    <Content Include="Views\Doctors\Edit.cshtml" />
-    <Content Include="Views\Doctors\Index.cshtml" />
-    <Content Include="Views\Patients\Create.cshtml" />
-    <Content Include="Views\Patients\Delete.cshtml" />
-    <Content Include="Views\Patients\Details.cshtml" />
-    <Content Include="Views\Patients\Edit.cshtml" />
-    <Content Include="Views\Patients\Index.cshtml" />
-    <Content Include="Views\Appointments\Create.cshtml" />
-    <Content Include="Views\Appointments\Delete.cshtml" />
-    <Content Include="Views\Appointments\Details.cshtml" />
-    <Content Include="Views\Appointments\Edit.cshtml" />
-    <Content Include="Views\Appointments\Index.cshtml" />
+    <Content Include="Views\Doctor1\Create.cshtml" />
+    <Content Include="Views\Doctor1\Delete.cshtml" />
+    <Content Include="Views\Doctor1\Details.cshtml" />
+    <Content Include="Views\Doctor1\Edit.cshtml" />
+    <Content Include="Views\Doctor1\Index.cshtml" />
+    <Content Include="Views\Appointment1\Create.cshtml" />
+    <Content Include="Views\Appointment1\Delete.cshtml" />
+    <Content Include="Views\Appointment1\Details.cshtml" />
+    <Content Include="Views\Appointment1\Edit.cshtml" />
+    <Content Include="Views\Appointment1\Index.cshtml" />
+    <Content Include="Views\Patient1\Create.cshtml" />
+    <Content Include="Views\Patient1\Delete.cshtml" />
+    <Content Include="Views\Patient1\Details.cshtml" />
+    <Content Include="Views\Patient1\Edit.cshtml" />
+    <Content Include="Views\Patient1\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\Migrations\MISContext\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

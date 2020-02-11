@@ -14,9 +14,9 @@ namespace ah412415_MIS4200.Models.DAL
         {
 
         }
-        public DbSet<Appointment> Appointment { get; set; }
-        public DbSet<Patient> Patient { get; set; }
-        public DbSet<Doctor> Doctor { get; set; }
+        public DbSet<Appointment1> Appointment1 { get; set; }
+        public DbSet<Patient1> Patient1 { get; set; }
+        public DbSet<Doctor1> Doctor1 { get; set; }
 
 
     }

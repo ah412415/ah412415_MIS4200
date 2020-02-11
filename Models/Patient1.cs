@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ah412415_MIS4200.Models
 {
-    public class Patient
+    public class Patient1
     {
         public int pateintID { get; set; }
         public string patientFirstName { get; set; }
@@ -16,7 +16,7 @@ namespace ah412415_MIS4200.Models
         public DateTime patientSince { get; set; }
 
 
-        public ICollection<Appointment> Appointment { get; set; }
+        public ICollection<Appointment1> Appointment { get; set; }
 
         [Key]
         public int patientID { get; set; }

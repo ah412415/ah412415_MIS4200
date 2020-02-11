@@ -11,107 +11,107 @@ using ah412415_MIS4200.Models.DAL;
 
 namespace ah412415_MIS4200.Controllers
 {
-    public class DoctorsController : Controller
+    public class Doctor1Controller : Controller
     {
         private MIS4200Context db = new MIS4200Context();
 
-        // GET: Doctors
+        // GET: Doctor1
         public ActionResult Index()
         {
-            return View(db.Doctor.ToList());
+            return View(db.Doctor1.ToList());
         }
 
-        // GET: Doctors/Details/5
+        // GET: Doctor1/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Doctor doctor = db.Doctor.Find(id);
-            if (doctor == null)
+            Doctor1 doctor1 = db.Doctor1.Find(id);
+            if (doctor1 == null)
             {
                 return HttpNotFound();
             }
-            return View(doctor);
+            return View(doctor1);
         }
 
-        // GET: Doctors/Create
+        // GET: Doctor1/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Doctors/Create
+        // POST: Doctor1/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "doctorID,doctorFirstName,doctorLastName,doctorSince,doctorSpecialty,doctorEmail,doctorPhone")] Doctor doctor)
+        public ActionResult Create([Bind(Include = "doctorID,doctorFirstName,doctorLastName,doctorSince,doctorSpecialty,doctorEmail,doctorPhone")] Doctor1 doctor1)
         {
             if (ModelState.IsValid)
             {
-                db.Doctor.Add(doctor);
+                db.Doctor1.Add(doctor1);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(doctor);
+            return View(doctor1);
         }
 
-        // GET: Doctors/Edit/5
+        // GET: Doctor1/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Doctor doctor = db.Doctor.Find(id);
-            if (doctor == null)
+            Doctor1 doctor1 = db.Doctor1.Find(id);
+            if (doctor1 == null)
             {
                 return HttpNotFound();
             }
-            return View(doctor);
+            return View(doctor1);
         }
 
-        // POST: Doctors/Edit/5
+        // POST: Doctor1/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "doctorID,doctorFirstName,doctorLastName,doctorSince,doctorSpecialty,doctorEmail,doctorPhone")] Doctor doctor)
+        public ActionResult Edit([Bind(Include = "doctorID,doctorFirstName,doctorLastName,doctorSince,doctorSpecialty,doctorEmail,doctorPhone")] Doctor1 doctor1)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(doctor).State = EntityState.Modified;
+                db.Entry(doctor1).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(doctor);
+            return View(doctor1);
         }
 
-        // GET: Doctors/Delete/5
+        // GET: Doctor1/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Doctor doctor = db.Doctor.Find(id);
-            if (doctor == null)
+            Doctor1 doctor1 = db.Doctor1.Find(id);
+            if (doctor1 == null)
             {
                 return HttpNotFound();
             }
-            return View(doctor);
+            return View(doctor1);
         }
 
-        // POST: Doctors/Delete/5
+        // POST: Doctor1/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Doctor doctor = db.Doctor.Find(id);
-            db.Doctor.Remove(doctor);
+            Doctor1 doctor1 = db.Doctor1.Find(id);
+            db.Doctor1.Remove(doctor1);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
