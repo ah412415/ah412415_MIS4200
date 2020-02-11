@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<ah412415_MIS4200.Models.Doctor>
 
 @{
-    ViewBag.Title = "Doctors";
+    ViewBag.Title = "Index";
 }
 
 <h2>Index</h2>
@@ -11,9 +11,6 @@
 </p>
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.doctorID)
-        </th>
         <th>
             @Html.DisplayNameFor(model => model.doctorFirstName)
         </th>
@@ -37,9 +34,6 @@
 
 @foreach (var item in Model) {
     <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.doctorID)
-        </td>
         <td>
             @Html.DisplayFor(modelItem => item.doctorFirstName)
         </td>

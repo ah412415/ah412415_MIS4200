@@ -18,7 +18,8 @@ namespace ah412415_MIS4200.Controllers
         // GET: Appointments
         public ActionResult Index()
         {
-            return View(db.Appointment.ToList());
+            var appointment = db.Appointment.Include(a => a.Doctor);
+            return View(appointment.ToList());
         }
 
         // GET: Appointments/Details/5
@@ -39,6 +40,7 @@ namespace ah412415_MIS4200.Controllers
         // GET: Appointments/Create
         public ActionResult Create()
         {
+            ViewBag.doctorID = new SelectList(db.Doctor, "doctorID", "doctorFirstName");
             return View();
         }
 
@@ -56,6 +58,7 @@ namespace ah412415_MIS4200.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.doctorID = new SelectList(db.Doctor, "doctorID", "doctorFirstName", appointment.doctorID);
             return View(appointment);
         }
 
@@ -71,6 +74,7 @@ namespace ah412415_MIS4200.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.doctorID = new SelectList(db.Doctor, "doctorID", "doctorFirstName", appointment.doctorID);
             return View(appointment);
         }
 
@@ -87,6 +91,7 @@ namespace ah412415_MIS4200.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.doctorID = new SelectList(db.Doctor, "doctorID", "doctorFirstName", appointment.doctorID);
             return View(appointment);
         }
 

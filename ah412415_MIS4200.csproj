@@ -177,7 +177,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\DAL\MIS4200Context.cs" />
+    <Compile Include="DAL\MIS4200Context.cs" />
     <Compile Include="Models\Patient.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -243,6 +243,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Doctors\Create.cshtml" />
+    <Content Include="Views\Doctors\Delete.cshtml" />
+    <Content Include="Views\Doctors\Details.cshtml" />
+    <Content Include="Views\Doctors\Edit.cshtml" />
+    <Content Include="Views\Doctors\Index.cshtml" />
     <Content Include="Views\Patients\Create.cshtml" />
     <Content Include="Views\Patients\Delete.cshtml" />
     <Content Include="Views\Patients\Details.cshtml" />
@@ -253,14 +258,10 @@
     <Content Include="Views\Appointments\Details.cshtml" />
     <Content Include="Views\Appointments\Edit.cshtml" />
     <Content Include="Views\Appointments\Index.cshtml" />
-    <Content Include="Views\Doctors\Create.cshtml" />
-    <Content Include="Views\Doctors\Delete.cshtml" />
-    <Content Include="Views\Doctors\Details.cshtml" />
-    <Content Include="Views\Doctors\Edit.cshtml" />
-    <Content Include="Views\Doctors\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Models\Migrations\MISContext\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
