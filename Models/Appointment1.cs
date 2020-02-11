@@ -9,8 +9,8 @@ namespace ah412415_MIS4200.Models
     public class Appointment1
     {
         public int appointmentID { get; set; }
-        public int DateTime { get; set; }
-        public decimal roomNumber { get; set; }
+        public decimal DateTime { get; set; }
+        public int roomNumber { get; set; }
         public string condition { get; set; }
 
         [Key]

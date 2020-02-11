@@ -15,6 +15,7 @@ namespace ah412415_MIS4200.Models
         public string doctorEmail { get; set; }
         public string doctorPhone { get; set; }
         public ICollection<Appointment1> Appointment { get; set; }
+
         [Key]
         public int doctorID { get; set; }
 
