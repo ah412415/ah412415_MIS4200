@@ -18,7 +18,7 @@ namespace ah412415_MIS4200.Models
         public virtual Patient Patient { get; set; }
         public int doctorID { get; set; }
         public virtual Doctor Doctor { get; set; }
-    
+
 
 
     }
