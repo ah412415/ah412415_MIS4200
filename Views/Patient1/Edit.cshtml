@@ -1,18 +1,17 @@
 ﻿@model ah412415_MIS4200.Models.Patient1
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Edit Patient";
 }
 
-<h2>Edit</h2>
-
+<h2>Edit Patient Details</h2>
+<h3>Remember to save updated details * </h3>
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Patient1</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.patientID)

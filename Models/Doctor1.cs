@@ -8,7 +8,9 @@ namespace ah412415_MIS4200.Models
 {
     public class Doctor1
     {
+        [Display (Name ="First Name")]
         public string doctorFirstName { get; set; }
+        [Display (Name = "Last Name")]
         public string doctorLastName { get; set; }
         public string doctorSince { get; set; }
         public string doctorSpecialty { get; set; }
