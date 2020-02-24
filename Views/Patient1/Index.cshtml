@@ -12,7 +12,9 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.pateintID)
+           
+                @Html.DisplayNameFor(model => model.pateintID)
+        
         </th>
         <th>
             @Html.DisplayNameFor(model => model.patientFirstName)
@@ -53,9 +55,9 @@
             @Html.DisplayFor(modelItem => item.patientSince)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.patientID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.patientID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.patientID })
+            @Html.ActionLink("Edit", "Edit", new { id = item.patientID }) <a span class="glyphicon glyphicon-pencil"></a> |
+            @Html.ActionLink("Details", "Details", new { id = item.patientID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.patientID })
         </td>
     </tr>
 }

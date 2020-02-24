@@ -35,6 +35,7 @@
             @Html.DisplayFor(modelItem => item.Doctor.doctorFirstName)
         </td>
         <td>
+            
             @Html.DisplayFor(modelItem => item.appointmentID)
         </td>
         <td>
@@ -47,9 +48,9 @@
             @Html.DisplayFor(modelItem => item.condition)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.appointment }) |
-            @Html.ActionLink("Details", "Details", new { id=item.appointment }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.appointment })
+            @Html.ActionLink("Edit", "Edit", new { id = item.appointment }) <a span class="glyphicon glyphicon-pencil"></a> |
+            @Html.ActionLink("Details", "Details", new { id = item.appointment }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.appointment })
         </td>
     </tr>
 }
