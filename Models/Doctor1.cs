@@ -13,7 +13,7 @@ namespace ah412415_MIS4200.Models
         [Display (Name ="First Name")]
         [Required(ErrorMessage ="Doctor first name is required")]
         [StringLength(20)]
-
+        public string fullName { get { return doctorLastName + ", " + doctorFirstName; } }
         public string doctorFirstName { get; set; }
         [Display (Name = "Last Name")]
         [Required(ErrorMessage = "Doctor last name is required")]

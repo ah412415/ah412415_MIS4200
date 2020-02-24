@@ -9,6 +9,8 @@ namespace ah412415_MIS4200.Models
 {
     public class Appointment1
     {
+        
+
         [Display(Name = "Appointment")]
         [Required(ErrorMessage = "Required")]
         public int appointmentID { get; set; }

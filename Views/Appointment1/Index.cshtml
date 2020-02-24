@@ -9,50 +9,53 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Doctor.doctorFirstName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.appointmentID)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DateTime)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.roomNumber)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.condition)
-        </th>
-        <th></th>
-    </tr>
+    </p>
+    <table class="table-bordered table-hover table-striped">
+        <tr>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Doctor.doctorFirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.appointmentID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.roomNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.condition)
+            </th>
+            <th></th>
+        </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Doctor.doctorFirstName)
-        </td>
-        <td>
-            
-            @Html.DisplayFor(modelItem => item.appointmentID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DateTime)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.roomNumber)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.condition)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.appointment }) <a span class="glyphicon glyphicon-pencil"></a> |
-            @Html.ActionLink("Details", "Details", new { id = item.appointment }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.appointment })
-        </td>
-    </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Doctor.doctorFirstName)
+                </td>
+                <td>
 
-</table>
+                    @Html.DisplayFor(modelItem => item.appointmentID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.roomNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.condition)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.appointment }) <a span class="glyphicon glyphicon-pencil"></a> |
+                    @Html.ActionLink("Details", "Details", new { id = item.appointment }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.appointment })
+                </td>
+            </tr>
+        }
+
+    </table>

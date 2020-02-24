@@ -11,6 +11,7 @@ namespace ah412415_MIS4200.Models
     {
         [Display(Name = "ID")]
         [Required(ErrorMessage = "Required")]
+        
         public int pateintID { get; set; }
 
         [Display(Name = "First Name")]
